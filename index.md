@@ -1,7 +1,7 @@
 ---
 layout: page
 title: LeGit!
-tagline: This is my playground!
+tagline: My minimalistic blog...
 ---
 {% include JB/setup %}
 
