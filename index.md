@@ -9,6 +9,10 @@ tagline: My minimalistic blog...
 
 My name: {{ site.author.name }}
 
+My location: {{ site.author.location }}
+
+Voice: {{ site.author.tel }}
+
 Check out my website at [MyHappyIsland](http://www.myhappyisland.com)
     
 ## Posts
