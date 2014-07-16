@@ -13,7 +13,7 @@ My location: {{ site.author.location }}
 
 Voice: {{ site.author.tel }}
 
-Follow me on Twitter: [{{ site.author.twitter }}]({{ site.author.twitter_url }})
+Follow me on Twitter: [@{{ site.author.twitter }}]({{ site.author.twitter_url }})
 
 Check out my website at [site.author.website](site.author.website_url)
     
