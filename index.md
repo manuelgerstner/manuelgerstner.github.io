@@ -8,9 +8,9 @@ tagline: My minimalistic blog...
 ## Recent
 
 {% for post in site.posts %}
-	<h2>{{ post.title }}</h2>
-    	{{ post.excerpt }}
-   	<a href="{{ post.url }}">Read more...</a>
+<h2>{{ post.title }}</h2>
+{{ post.excerpt }}
+<a href="{{ post.url }}">Read more...</a>
 {% endfor %}
     
 ## Posts
