@@ -5,6 +5,8 @@ tagline: My minimalistic blog...
 ---
 {% include JB/setup %}
 
+![Me]({{ site.url }}/assets/cay.png)
+
 <ul>
   {% for post in site.posts %}
     <li>
