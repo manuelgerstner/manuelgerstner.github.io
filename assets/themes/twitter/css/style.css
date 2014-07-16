@@ -1,6 +1,6 @@
 /* Main HTML stuff */
 html, body {
-  font-family: 'Inconsolata', ;
+  font-family: 'Inconsolata', sans-serif;
 }
 
 /* Custom container */
