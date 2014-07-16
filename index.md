@@ -5,14 +5,11 @@ tagline: This is my playground!
 ---
 {% include JB/setup %}
 
-<div class="jumbotron">
 ## Info
 
 My name: {{ site.author.name }}
 
 Check out my website at [MyHappyIsland](http://www.myhappyisland.com)
-
-</div>
     
 ## Posts
 
