@@ -6,6 +6,8 @@ group: navigation
 ---
 {% include JB/setup %}
 
+![Me]({{ site.url }}/assets/img/cay.png)
+
 ## Info
 
 My name: {{ site.author.name }}
