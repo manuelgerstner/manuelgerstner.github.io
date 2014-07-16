@@ -16,7 +16,10 @@ author :
   tel: +49-173-570-34-26
   email : manuelgerstner@gmail.com
   github : manuelgerstner
-  twitter : manuelgerstner
+  twitter : @manuelgerstner
+  twitter_url: https://twitter.com/manuelgerstner
+  website: MyHappyIsland
+  website_url: http://www.myhappyisland.com
   feedburner : feedname
 
 # The production_url is only used when full-domain names are needed

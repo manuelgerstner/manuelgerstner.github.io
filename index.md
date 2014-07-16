@@ -13,7 +13,9 @@ My location: {{ site.author.location }}
 
 Voice: {{ site.author.tel }}
 
-Check out my website at [MyHappyIsland](http://www.myhappyisland.com)
+Follow me on Twitter: [{{ site.author.twitter }}]({{ site.author.twitter_url }})
+
+Check out my website at [site.author.website](site.author.website_url)
     
 ## Posts
 
