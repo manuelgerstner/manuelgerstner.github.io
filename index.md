@@ -5,17 +5,14 @@ tagline: My minimalistic blog...
 ---
 {% include JB/setup %}
 
-## Info
-
-My name: {{ site.author.name }}
-
-My location: {{ site.author.location }}
-
-Voice: {{ site.author.tel }}
-
-Follow me on Twitter: [@{{ site.author.twitter }}]({{ site.author.twitter_url }})
-
-Check out my website at [{{ site.author.website }}]({{ site.author.website_url }})
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      {{ post.excerpt }}
+    </li>
+  {% endfor %}
+</ul>
     
 ## Posts
 
