@@ -32,6 +32,10 @@ author :
 #
 production_url : http://manuelgerstner.github.io
 
+
+# Markdown Interpreter
+markdown: kramdown
+
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :
@@ -70,10 +74,6 @@ JB :
   #   /assets
   #
   ASSET_PATH : false
-
-
-  # Markdown Interpreter
-  markdown: kramdown
 
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change them here if needed.
