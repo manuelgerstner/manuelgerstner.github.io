@@ -36,6 +36,9 @@ production_url : http://manuelgerstner.github.io
 # Markdown Interpreter
 markdown: kramdown
 
+# Excerpt separator
+excerpt_separator: <!--more-->
+
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :
