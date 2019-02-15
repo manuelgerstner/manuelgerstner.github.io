@@ -18,5 +18,5 @@ My location: {{ site.owner.location }}
 
 Voice: {{ site.author.tel }}
 
-Follow me on Twitter: [@{{ site.author.twitter }}]({{ site.author.twitter_url }})
+Follow me on Twitter: [@{{ site.owner.twitter }}](https://twitter.com/manuelgerstner)
     
