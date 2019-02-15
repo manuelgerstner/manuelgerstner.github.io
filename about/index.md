@@ -1,10 +1,9 @@
 ---
 layout: page
-title : About
-header : About me
-group: navigation
+title: About
+comments: false
+modified: 2016-02-01
 ---
-{% include JB/setup %}
 
 ![Me]({{ site.url }}/images/cay.png)
 
