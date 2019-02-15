@@ -6,15 +6,15 @@ group: navigation
 ---
 {% include JB/setup %}
 
-![Me]({{ site.url }}/assets/img/cay.png)
+![Me]({{ site.url }}/images/cay.png)
 
 ## Info
 
 Full-time gypsy, avid software-developer!
 
-My name: {{ site.author.name }}
+My name: {{ site.owner.name }}
 
-My location: {{ site.author.location }}
+My location: {{ site.owner.location }}
 
 Voice: {{ site.author.tel }}
 
