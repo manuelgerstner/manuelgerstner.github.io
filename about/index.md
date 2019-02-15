@@ -16,7 +16,7 @@ My name: {{ site.owner.name }}
 
 My location: {{ site.owner.location }}
 
-Voice: {{ site.author.tel }}
+Voice: {{ site.owner.voice }}
 
 Follow me on Twitter: [@{{ site.owner.twitter }}](https://twitter.com/manuelgerstner)
     

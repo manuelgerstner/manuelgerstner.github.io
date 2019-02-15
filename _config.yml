@@ -1,4 +1,4 @@
-title:            Manu's legit Git Page
+title:            Manu's Blog
 description:      Describe your website here.
 disqus_shortname: 
 # Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
@@ -11,8 +11,10 @@ owner:
   avatar:         manu.jpg
   bio:            "Full-time gypsy, avid software-developer!"
   email:          manuelgerstner@gmail.com
+  location:       Munich, Germany
+  voice:          +49 173 570 3426
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        https://twitter.com/manuelgerstner        
+  twitter:        manuelgerstner        
   facebook:       
   github:         
   stackexchange:  
