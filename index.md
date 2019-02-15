@@ -1,6 +1,6 @@
 ---
 layout: page
-title: LeGit!
+title: Manu's space
 tagline: My minimalistic blog...
 ---
 {% include JB/setup %}
