@@ -1,87 +1,47 @@
-title:            Manu's Blog
-description:      Describe your website here.
-disqus_shortname: 
-# Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
-# When testing locally leave blank or use http://localhost:4000
-url: https://manuelgerstner.github.io
+# Site settings
+title_left    : "Manus"
+title_right   : "blog" # default: ""
+description   : "Travelling - Software Development - Digital Nomadism"
+keywords      : "software, development, digital, nomad, travel, travelling"
+url           : https://manuelgerstner.github.io/ # site url
+baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
+cover         : "" # image uri like logo/cover image for site seo
 
-# Owner/author information
-owner:
-  name:           Manuel  Gerstner
-  avatar:         manu.jpg
-  bio:            "Full-time gypsy, avid software-developer!"
-  email:          manuelgerstner@gmail.com
-  location:       Munich, Germany
-  voice:          +49 173 570 3426
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:        manuelgerstner        
-  facebook:       
-  github:         
-  stackexchange:  
-  linkedin:       
-  instagram:      
-  flickr:         
-  tumblr:
+google_analytics  : UA-XXXXX-XX
+twitter_username  : "manuelgerstner"
+comments_enabled  : false # if enabled (set to true), please provide your disqus_username
+disqus_shortname  : ""
+postshare_enabled : false
 
-# Background image to be tiled on all pages
-background: 
+# Build settings
+permalink   : /:year/:title/
+markdown    : kramdown
+highlighter : rouge
 
-# Analytics and webmaster tools stuff goes here
-google_analytics:   
-google_verify:      
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
+source      : ./
+destination : ./_site
 
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    Eruope/Berlin
-future:      false  # publish future dated posts --  true, false (default) 
-highlighter: rouge
-markdown:    kramdown
+# Sass configuration
+sass:
+  sass_dir  : assets/scss
+  style     : compressed # expanded
+
+# Author settings
+author:
+  name      : "Manuel Gerstner"
+  location  : Munich
+  voice     : +49 173 570 3426
+
 plugins:
   - jekyll-sitemap
+  - bourbon
   - jekyll-paginate
-  - jekyll-gist
-  - jekyll-feed
-sass:
-  sass_dir: _sass
-  style: compressed
 
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title/
+# navbar pages
+navbar:
+  - slug : about
+    title: About
+  - slug : blog
+    title: Blog
 
-# Amount of post to show on home page
-paginate: 5
-
-kramdown:
-  input: GFM
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  enable_coderay: false
-
-include: 
-  - .htaccess
-exclude: 
-  - "*.less"
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - CHANGELOG
-  - Capfile
-  - Gemfile
-  - Gruntfile.js
-  - LICENSE
-  - README
-  - Rakefile
-  - config
-  - gulpfile.js
-  - lib
-  - log
-  - node_modules
-  - package.json
-  - spec
-  - tmp
+exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md", "script"]

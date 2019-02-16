@@ -9,13 +9,13 @@ modified: 2016-02-01
 
 ## Info
 
-Full-time gypsy, avid software-developer!
+Full-time gypsy, avid software-developer, apprentice digital nomad!
 
-My name: {{ site.owner.name }}
+My name: {{ site.author.name }}
 
-My location: {{ site.owner.location }}
+My location: {{ site.author.location }}
 
-Voice: {{ site.owner.voice }}
+Voice: {{ site.author.voice }}
 
-Follow me on Twitter: [@{{ site.owner.twitter }}](https://twitter.com/manuelgerstner)
+Follow me on Twitter: [@{{ site.twitter_username }}](https://twitter.com/manuelgerstner)
     
