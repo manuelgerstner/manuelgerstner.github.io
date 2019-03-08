@@ -5,17 +5,15 @@ comments: false
 modified: 2016-02-01
 ---
 
-![Me]({{ site.url }}/images/cay.png)
-
 ## Info
 
 Full-time gypsy, avid software-developer, apprentice digital nomad!
 
-My name: {{ site.author.name }}
+My name: Manuel Gerstner
 
-My location: {{ site.author.location }}
+My location: [Munich, Germany](https://www.munich.travel/en-gb)
 
-Voice: {{ site.author.voice }}
+Voice: +49 173 570 3426
 
 Follow me on Twitter: [@{{ site.twitter_username }}](https://twitter.com/manuelgerstner)
     
