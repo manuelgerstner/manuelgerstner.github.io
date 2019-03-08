@@ -1,47 +1,18 @@
-# Site settings
-title_left    : "Manus"
-title_right   : "blog" # default: ""
-description   : "Travelling - Software Development - Digital Nomadism"
-keywords      : "software, development, digital, nomad, travel, travelling"
-url           : https://manuelgerstner.github.io/ # site url
-baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
-cover         : "" # image uri like logo/cover image for site seo
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-google_analytics  : UA-XXXXX-XX
-twitter_username  : "manuelgerstner"
-comments_enabled  : false # if enabled (set to true), please provide your disqus_username
-disqus_shortname  : ""
-postshare_enabled : false
+# Site settings
+title: Manuel Gerstner
+email: manuelgerstner@gmail.com
+description:  Hi, my name is Manuel. Software Developer, currently based in Munich, Germany.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://www.myhappyisland.com" # the base hostname & protocol for your site
+twitter_username: manuelgerstner
+github_username:  manuelgerstner
 
 # Build settings
-permalink   : /:year/:title/
-markdown    : kramdown
-highlighter : rouge
-
-source      : ./
-destination : ./_site
-
-# Sass configuration
-sass:
-  sass_dir  : assets/scss
-  style     : compressed # expanded
-
-# Author settings
-author:
-  name      : "Manuel Gerstner"
-  location  : Munich
-  voice     : +49 173 570 3426
-
-plugins:
-  - jekyll-sitemap
-  - bourbon
-  - jekyll-paginate
-
-# navbar pages
-navbar:
-  - slug : about
-    title: About
-  - slug : blog
-    title: Blog
-
-exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md", "script"]
+markdown: kramdown
