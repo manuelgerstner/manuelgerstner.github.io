@@ -2,7 +2,7 @@
 layout: post
 title:  "Remote Work Series: Maputo, Mozambique"
 date:   2019-05-30 11:49:45 +0200
-categories: remotework digitalnomad travel
+categories: [remotework,digitalnomad,travel]
 ---
 A short recap of my last few days working remotely from Maputo, the capital of Mozambique
 
