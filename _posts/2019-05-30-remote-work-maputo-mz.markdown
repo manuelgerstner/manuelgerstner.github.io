@@ -6,6 +6,7 @@ categories: [remotework,digitalnomad,travel]
 ---
 
 A short recap of my last few days working remotely from Maputo, the capital of Mozambique
+
 Ever since the first time I spent a few weeks travelling the remote backroads and palm-fringed coastal areas of Gaza and Inhambane province Mozambique was high up there in my list. Is it the endlessly friendly and joyful locals? Or is it the pristine beaches that feel so much more amazing after travelling dusty inland roads for days? It is, of course, a bit of both and after all Mozambique is a truly African place with its own culture, music and cuisine.  
 
 ![Smiling Mozambicans](/assets/images/mozambique_locals.jpg)

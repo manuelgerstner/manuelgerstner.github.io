@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "PiHole: Ad- and tracking-free browsing for everyone on your home network"
+date:   2019-06-13 11:49:45 +0200
+categories: [tech,home,smarthome]
+---
+
+![Hole in the sky](/assets/images/space_circle_hole.jpg)
+
+A short recap of my last few days working remotely from Maputo, the capital of Mozambique
+
+Ever since the first time I spent a few weeks travelling the remote backroads and palm-fringed coastal areas of Gaza and Inhambane province Mozambique was high up there in my list. Is it the endlessly friendly and joyful locals? Or is it the pristine beaches that feel so much more amazing after travelling dusty inland roads for days? It is, of course, a bit of both and after all Mozambique is a truly African place with its own culture, music and cuisine.
