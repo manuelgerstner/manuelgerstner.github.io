@@ -8,7 +8,7 @@
 # Site settings
 title: Manuel Gerstner
 email: manuelgerstner@gmail.com
-description:  Hi, my name is Manuel. Software Developer, currently based in Munich, Germany.
+description:  Hi, my name is Manuel. I am Software Developer and Cloud Architect, currently based somewhere between GMT and GMT+2 (Europe / Africa).
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.myhappyisland.com" # the base hostname & protocol for your site
 twitter_username: manuelgerstner
