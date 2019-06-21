@@ -5,8 +5,6 @@ comments: false
 modified: 2019-03-08
 ---
 
-## Info
-
 My name: Manuel Gerstner (MSc Information Systems)
 
 
