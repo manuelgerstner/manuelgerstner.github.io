@@ -9,6 +9,8 @@ categories: [tech,home,smarthome]
 
 What if your home network could just swallow all ad-related requests for everyone using it?
 
-Let’s start by having a look at the summary of the PiHole web console. When I first looked at these numbers I was certain that it must be due to some misconfiguration on my end, but looking deeper into the list of blocked URLs it became clear that on a normal day around 30-40% of all DNS requests don’t make it through Pi-Holes massive blacklist. 
+Let’s start by having a look at the summary of the PiHole web console below. When I first looked at these numbers I was certain that it must be due to some misconfiguration on my end, but looking deeper into the list of blocked URLs it became clear that on a normal day around 30% of all DNS requests don’t make it through Pi-Holes massive blacklist. 
 
-So what does Pi-Hole actually do? Have a look at this GitHub repo https://github.com/StevenBlack/hosts, which is essentially a list of various hosts files containing a huge selection of ad-related urls that are all resolved to 0.0.0.0. This means that whenever you request one of the urls in that list, the request does not even leave your machine.
+![Pi-Hole at work blocking ad related requests](/assets/images/pihole_stats.jpg)
+
+So what does Pi-Hole actually do? Have a look at this GitHub repo [SteveBlack/hosts](https://github.com/StevenBlack/hosts), which is essentially a list of various hosts files containing a huge selection of ad-related urls that are all resolved to 0.0.0.0. This means that whenever you request one of the urls in that list, the request does not even leave your machine.
