@@ -11,13 +11,13 @@ My name: Manuel Gerstner (MSc Information Systems)
 Full-time gypsy, avid software developer and cloud engineer, apprentice digital nomad! Having worked as an IT consultant for the last years, I have helped various of my clients shift towards a more modern and cloud-native approach to software development.
 
 
-I am normally working on projects that last from about 3 to up to 6 months, but I am able to adjust accordingly in case the roadmap of your project differs.
+I am normally working on projects that last from about 3 to up to 6 months, but I am able to adjust accordingly in case the roadmap of your project differs. Interested? Let's meet in person or online, just schedule an appointment [here](https://calendly.com/mgerstner/30min).
 
 
 My locations: [Munich, Germany](https://www.munich.travel/en-gb) / [Cape Town, South Africa](https://www.capetown.travel)
 
 
-Voice: +49 173 570 3426
+Voice: [+49 173 570 3426](tel:00491735703426)
 
 
 Follow me on Twitter: [@{{ site.twitter_username }}](https://twitter.com/manuelgerstner)
