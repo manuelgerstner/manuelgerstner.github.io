@@ -7,7 +7,7 @@ categories: [tech,home,smarthome]
 
 ![Hole in the sky](/assets/images/space_circle_hole.jpg)
 
-What if your home network could just swallow all ad-related requests for everyone using it?
+**What if your home network could just swallow all ad-related requests for everyone using it?**
 
 Let’s start by having a look at the summary of the PiHole web console below. When I first looked at these numbers I was certain that it must be due to some misconfiguration on my end, but looking deeper into the list of blocked URLs it became clear that on a normal day around 30% of all DNS requests don’t make it through PiHoles massive blacklist. 
 
