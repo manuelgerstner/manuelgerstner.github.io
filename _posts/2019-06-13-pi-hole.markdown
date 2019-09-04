@@ -13,4 +13,7 @@ Let’s start by having a look at the summary of the PiHole web console below. W
 
 ![Pi-Hole at work blocking ad related requests](/assets/images/pihole_stats.jpg)
 
-So what does Pi-Hole actually do? Have a look at this GitHub repo [SteveBlack/hosts](https://github.com/StevenBlack/hosts), which is essentially a list of various hosts files containing a huge selection of ad-related urls that are all resolved to 0.0.0.0. This means that whenever you request one of the urls in that list, the request does not even leave your machine.
+So what does Pi-Hole actually do? Have a look at this GitHub repo [SteveBlack/hosts](https://github.com/StevenBlack/hosts), which is essentially a list of various hosts files containing a huge selection of ad-related urls that are all resolved to 0.0.0.0. This means that whenever you request one of the urls in that list, the request does not even leave your machine. While this method will do the job of "swallowing" all spam urls it has two disadvantages:
+
+* The `/etc/hosts` file will need to constantly be adjusted to reflect recent changes in the hosts lists
+* This solution would have to be manually set up on every single device and is more tricky on mobile devices
