@@ -43,7 +43,7 @@ Up next is a list of all lists which contain blocked URLs with a recommended pre
 
 When asked if IPv4 and IPv6 requests should be handled, I selected both.
 
-The next steps will guide you through the process of enabling the PiHole web-interface which I highly recommend installing. If you are lucky, you are not running another http-server on your device. In that case you can simply chose to install the recommended one. If you are unlucky and want to stick to your old server, you will have to adjust the PiHole config to work with it. Check out ![this post](https://discourse.pi-hole.net/t/migrating-pi-hole-from-lighttpd-to-apache/152/18) to do this with Apache.
+The next steps will guide you through the process of enabling the PiHole web-interface which I highly recommend installing. If you are lucky, you are not running another http-server on your device. In that case you can simply chose to install the recommended one. If you are unlucky and want to stick to your old server, you will have to adjust the PiHole config to work with it. Check out [this post](https://discourse.pi-hole.net/t/migrating-pi-hole-from-lighttpd-to-apache/152/18) to do this with Apache.
 
 Once this is done, you will be presented with some final information on how to reach the web-interface and which password to use.
 
