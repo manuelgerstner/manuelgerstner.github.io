@@ -18,9 +18,17 @@ So what does Pi-Hole actually do? Have a look at this GitHub repo [SteveBlack/ho
 * The `/etc/hosts` file will need to constantly be adjusted to reflect recent changes in the hosts lists
 * This solution would have to be manually set up on every single device and is more tricky on mobile devices
 
-Pi-Hole, if installed on a single device within your home network, will take care of that. The main goal is to set it up as a local DNS server that will be used by all devices in your network.
+PiHole, if installed on a single device within your home network, will take care of that. The main goal is to set it up as a local DNS server that will be used by all devices in your network.
 
 ## Prerequisites
 
 * A router that lets you define a custom IP for making DNS queries
 * A device that is always running which we will install Pi-Hole on and redirect all DNS-queries to
+
+## Installing PiHole on your device
+
+I had a Raspberry Pi 2 Model B with Ubuntu Server installed. If you have a Raspberry 2 or 3 lying around you can find more info on how to install Ubuntu here. Other operating systems will work equally, just keep in mind that all of the following commands reflect the workflow on Ubuntu on a Raspberry Pi 2.
+
+From there it is as simple as running
+
+```curl -sSL https://install.pi-hole.net | bash```
