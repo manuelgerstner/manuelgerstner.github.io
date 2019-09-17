@@ -7,5 +7,5 @@ categories: [aws,cloud,tech]
 
 ![Docker Containers ECS](/assets/images/container-docks.jpg)
 
-**What if your home network could just swallow all ad-related requests for everyone using it?**
+**A hands-on guide on how to integrate an Elasticsearch Cluster into your existing AWS architecture using Cloudformation, ECS and Docker**
 
