@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Remote Work Series: Maputo, Mozambique"
+title:  "Working Remotely: Maputo, Mozambique"
 date:   2019-05-30 11:49:45 +0200
 categories: [remotework,digitalnomad,travel]
 ---
