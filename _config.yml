@@ -8,10 +8,10 @@
 # Site settings
 title: Manuel Gerstner
 email: projects@mgerstner.de
-description:  Hi, my name is Manuel. I am freelance Software Developer and Cloud Architect, currently based somewhere between GMT and GMT+2 (Africa / Europe). 
+description:  Hi, my name is Manuel. I'm a freelance Software Developer and Cloud Architect, currently based somewhere between GMT and GMT+2 (Africa / Europe). 
 details: "Here are some of the technologies and frameworks I have worked with extensively over the last years: Java, Spring Boot, Spring Cloud, Android (Java / Kotlin), Hibernate, Microservices, AWS, REST, ActiveMQ, SQL, NodeJS, ReactJS, HTML, CSS, Git, ElasticSearch, DevOps and Linux."
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.myhappyisland.com" # the base hostname & protocol for your site
+url: "https://mgerstner.de" # the base hostname & protocol for your site
 twitter_username: manuelgerstner
 github_username:  manuelgerstner
 
