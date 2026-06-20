@@ -1,0 +1,47 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { useTranslations } from '../../i18n/translations';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ id }) => id.startsWith('en/'));
+  return posts.map((post) => ({
+    params: { slug: post.slug.replace(/^en\//, '') },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+const lang = 'en';
+const t = useTranslations(lang);
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+
+<BaseLayout title={post.data.title} lang={lang} description={post.data.description}>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+    <a href="/blog" class="inline-flex items-center text-sm text-indigo-600 hover:underline mb-8">
+      {t('blog.back')}
+    </a>
+    <article>
+      <header class="mb-10">
+        <time
+          datetime={post.data.pubDate.toISOString()}
+          class="text-sm text-gray-500"
+        >
+          {t('blog.published')} {formatDate(post.data.pubDate)}
+        </time>
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-3 leading-tight">
+          {post.data.title}
+        </h1>
+        <p class="text-lg text-gray-600 mt-4">{post.data.description}</p>
+      </header>
+      <div class="prose prose-gray prose-indigo max-w-none">
+        <Content />
+      </div>
+    </article>
+  </div>
+</BaseLayout>

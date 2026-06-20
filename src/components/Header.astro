@@ -1,0 +1,39 @@
+---
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { useTranslations } from '../i18n/translations';
+import type { Lang } from '../i18n/translations';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const homeUrl = lang === 'en' ? '/' : `/${lang}`;
+const blogUrl = lang === 'en' ? '/blog' : `/${lang}/blog`;
+---
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center justify-between h-16">
+      <a href={homeUrl} class="text-xl font-bold text-gray-900 hover:text-indigo-600 transition-colors tracking-tight">
+        Manuel Gerstner
+      </a>
+      <div class="flex items-center gap-6">
+        <a
+          href={homeUrl}
+          class="text-sm font-medium text-gray-600 hover:text-indigo-600 transition-colors hidden sm:block"
+        >
+          {t('nav.home')}
+        </a>
+        <a
+          href={blogUrl}
+          class="text-sm font-medium text-gray-600 hover:text-indigo-600 transition-colors"
+        >
+          {t('nav.blog')}
+        </a>
+        <LanguageSwitcher lang={lang} />
+      </div>
+    </nav>
+  </div>
+</header>

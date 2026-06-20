@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { useTranslations } from '../i18n/translations';
+import type { CollectionEntry } from 'astro:content';
+import type { Lang } from '../i18n/translations';
+
+interface Props {
+  lang: Lang;
+  posts: CollectionEntry<'blog'>[];
+}
+
+const { lang, posts } = Astro.props;
+const t = useTranslations(lang);
+
+const sorted = posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+function postUrl(slug: string) {
+  const bare = slug.replace(/^(en|de|pt)\//, '');
+  return lang === 'en' ? `/blog/${bare}` : `/${lang}/blog/${bare}`;
+}
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString(
+    lang === 'de' ? 'de-DE' : lang === 'pt' ? 'pt-BR' : 'en-GB',
+    { year: 'numeric', month: 'long', day: 'numeric' }
+  );
+}
+---
+
+<BaseLayout title={t('blog.title')} lang={lang}>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+    <div class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-3">{t('blog.title')}</h1>
+      <p class="text-lg text-gray-600">{t('blog.subtitle')}</p>
+    </div>
+
+    {sorted.length === 0 ? (
+      <p class="text-gray-500">No posts yet.</p>
+    ) : (
+      <div class="space-y-8">
+        {sorted.map((post) => (
+          <article class="group border-b border-gray-100 pb-8 last:border-0">
+            <a href={postUrl(post.slug)} class="block">
+              <time
+                datetime={post.data.pubDate.toISOString()}
+                class="text-sm text-gray-500"
+              >
+                {formatDate(post.data.pubDate)}
+              </time>
+              <h2 class="text-xl font-semibold text-gray-900 mt-2 mb-2 group-hover:text-indigo-600 transition-colors">
+                {post.data.title}
+              </h2>
+              <p class="text-gray-600 leading-relaxed">{post.data.description}</p>
+              <span class="inline-block mt-3 text-sm font-medium text-indigo-600 group-hover:underline">
+                {t('blog.readmore')}
+              </span>
+            </a>
+          </article>
+        ))}
+      </div>
+    )}
+  </div>
+</BaseLayout>
