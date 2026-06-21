@@ -16,12 +16,24 @@ const { Content } = await post.render();
 const lang = 'fr';
 const t = useTranslations(lang);
 
+const siteUrl = (Astro.site ?? new URL('https://manuelgerstner.github.io')).href.replace(/\/$/, '');
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.pubDate.toISOString(),
+  dateModified: (post.data.updatedDate ?? post.data.pubDate).toISOString(),
+  author: { '@type': 'Person', name: 'Manuel Gerstner', url: siteUrl },
+  publisher: { '@type': 'Person', name: 'Manuel Gerstner', url: siteUrl },
+};
+
 function formatDate(date: Date) {
   return date.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 ---
 
-<BaseLayout title={post.data.title} lang={lang} description={post.data.description}>
+<BaseLayout title={post.data.title} lang={lang} description={post.data.description} type="article" structuredData={articleSchema}>
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
     <a href="/fr/blog" class="inline-flex items-center text-sm text-indigo-600 hover:underline mb-8">
       {t('blog.back')}

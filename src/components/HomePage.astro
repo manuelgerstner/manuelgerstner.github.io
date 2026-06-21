@@ -13,9 +13,39 @@ const t = useTranslations(lang);
 const data = portfolioData[lang];
 const blogUrl = lang === 'en' ? '/blog' : `/${lang}/blog`;
 const contactId = 'contact';
+
+const siteUrl = (Astro.site ?? new URL('https://manuelgerstner.github.io')).href.replace(/\/$/, '');
+
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Manuel Gerstner',
+    jobTitle: 'Software Engineer & Cloud Architect',
+    email: 'mailto:manuel@nko-technologies.com',
+    url: siteUrl,
+    image: `${siteUrl}/profile.jpg`,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Cape Town',
+      addressCountry: 'ZA',
+    },
+    alumniOf: {
+      '@type': 'EducationalOrganization',
+      name: 'Technical University of Munich',
+    },
+    sameAs: ['https://github.com/manuelgerstner'],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Manuel Gerstner',
+    url: siteUrl,
+  },
+];
 ---
 
-<BaseLayout title={t('nav.home')} lang={lang} description={data.profile}>
+<BaseLayout title={t('nav.home')} lang={lang} description={data.profile} structuredData={structuredData}>
   <!-- Hero -->
   <section class="relative overflow-hidden py-24 sm:py-32">
     <img

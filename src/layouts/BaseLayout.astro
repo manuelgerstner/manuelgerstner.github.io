@@ -2,31 +2,97 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import type { Lang } from '../i18n/translations';
+import { getLocalizedUrl } from '../i18n/translations';
 
 interface Props {
   title: string;
   lang: Lang;
   description?: string;
+  type?: 'website' | 'article';
+  structuredData?: object | object[];
 }
 
-const { title, lang, description = 'Software Engineer & Cloud Architect — Manuel Gerstner' } = Astro.props;
+const {
+  title,
+  lang,
+  description = 'Software Engineer & Cloud Architect — Manuel Gerstner',
+  type = 'website',
+  structuredData,
+} = Astro.props;
+
+const siteBase = Astro.site ?? new URL('https://manuelgerstner.github.io');
+const canonicalUrl = new URL(Astro.url.pathname, siteBase).href;
+const ogImage = new URL('/profile.jpg', siteBase).href;
+const fullTitle = `${title} | Manuel Gerstner`;
+
+const allLangs = ['en', 'de', 'pt', 'fr'] as const;
+const ogLocaleMap: Record<string, string> = { en: 'en_US', de: 'de_DE', pt: 'pt_BR', fr: 'fr_FR' };
+
+const hreflangs = allLangs.map((l) => ({
+  hreflang: l,
+  href: new URL(getLocalizedUrl(Astro.url, l), siteBase).href,
+}));
+const xDefault = new URL(getLocalizedUrl(Astro.url, 'en'), siteBase).href;
+
+const ldData = structuredData
+  ? Array.isArray(structuredData)
+    ? structuredData
+    : [structuredData]
+  : [];
 ---
 
 <!doctype html>
 <html lang={lang}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="author" content="Manuel Gerstner" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- hreflang alternates -->
+    {hreflangs.map(({ hreflang, href }) => (
+      <link rel="alternate" hreflang={hreflang} href={href} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={xDefault} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content="Manuel Gerstner" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content={ogLocaleMap[lang]} />
+    {allLangs
+      .filter((l) => l !== lang)
+      .map((l) => (
+        <meta property="og:locale:alternate" content={ogLocaleMap[l]} />
+      ))}
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- JSON-LD structured data -->
+    {ldData.map((item) => (
+      <script type="application/ld+json" set:html={JSON.stringify(item)} />
+    ))}
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
     <meta name="generator" content={Astro.generator} />
-    <title>{title} | Manuel Gerstner</title>
+    <title>{fullTitle}</title>
   </head>
   <body class="bg-white text-gray-900 antialiased" style="font-family: 'Inter', system-ui, sans-serif;">
     <Header lang={lang} />
