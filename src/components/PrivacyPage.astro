@@ -1,0 +1,102 @@
+---
+interface Props {
+  lang: 'en' | 'de';
+}
+const { lang } = Astro.props;
+---
+
+<section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  {lang === 'de' ? (
+    <>
+      <h1 class="text-3xl font-bold text-gray-900 mb-8">Datenschutzerklärung</h1>
+      <div class="space-y-8 text-gray-700">
+        <div>
+          <h2 class="text-lg font-semibold text-gray-900 mb-2">Verantwortlicher</h2>
+          <p>
+            Manuel Gerstner<br />
+            21 Constantia Road<br />
+            Cape Town, 8001<br />
+            Südafrika (RSA)<br />
+            E-Mail: <a href="mailto:manuel@nko-technologies.com" class="text-indigo-600 hover:underline">manuel@nko-technologies.com</a>
+          </p>
+        </div>
+        <div>
+          <h2 class="text-lg font-semibold text-gray-900 mb-2">Erhobene Daten</h2>
+          <p>
+            Diese Website verwendet keine Cookies und setzt kein Tracking oder Analyse-Tool ein.
+            Es werden keine personenbezogenen Daten aktiv gesammelt.
+          </p>
+          <p class="mt-3">
+            Beim Abruf dieser Website werden vom Hosting-Anbieter (GitHub Pages) technisch
+            notwendige Zugriffsdaten in Server-Logfiles gespeichert (z.&thinsp;B. IP-Adresse,
+            Datum und Uhrzeit des Abrufs, aufgerufene Seite). Diese Daten werden nicht mit anderen
+            Datenquellen zusammengeführt. Informationen zur Datenverarbeitung durch GitHub Inc.
+            finden Sie in deren Datenschutzerklärung.
+          </p>
+        </div>
+        <div>
+          <h2 class="text-lg font-semibold text-gray-900 mb-2">Google Fonts</h2>
+          <p>
+            Diese Website bindet Schriftarten von Google Fonts (Google LLC) ein. Dabei werden beim
+            Seitenaufruf Anfragen an Server von Google gestellt, wodurch Ihre IP-Adresse an Google
+            übermittelt werden kann. Grundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes
+            Interesse an einer einheitlichen Darstellung).
+          </p>
+        </div>
+        <div>
+          <h2 class="text-lg font-semibold text-gray-900 mb-2">Ihre Rechte</h2>
+          <p>
+            Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der
+            Verarbeitung Ihrer personenbezogenen Daten sowie das Recht auf Datenübertragbarkeit.
+            Bei Anfragen wenden Sie sich bitte per E-Mail an den oben genannten Verantwortlichen.
+          </p>
+        </div>
+      </div>
+    </>
+  ) : (
+    <>
+      <h1 class="text-3xl font-bold text-gray-900 mb-8">Privacy Notice</h1>
+      <div class="space-y-8 text-gray-700">
+        <div>
+          <h2 class="text-lg font-semibold text-gray-900 mb-2">Data Controller</h2>
+          <p>
+            Manuel Gerstner<br />
+            21 Constantia Road<br />
+            Cape Town, 8001<br />
+            South Africa (RSA)<br />
+            Email: <a href="mailto:manuel@nko-technologies.com" class="text-indigo-600 hover:underline">manuel@nko-technologies.com</a>
+          </p>
+        </div>
+        <div>
+          <h2 class="text-lg font-semibold text-gray-900 mb-2">Data Collection</h2>
+          <p>
+            This website does not use cookies and does not employ any tracking or analytics tools.
+            No personal data is actively collected by this site.
+          </p>
+          <p class="mt-3">
+            When you visit this website, the hosting provider (GitHub Pages) may store technically
+            necessary access data in server log files (e.g. IP address, date and time of access,
+            page requested). This data is not merged with other data sources. Please refer to
+            GitHub Inc.'s privacy policy for details on their data processing.
+          </p>
+        </div>
+        <div>
+          <h2 class="text-lg font-semibold text-gray-900 mb-2">Google Fonts</h2>
+          <p>
+            This website loads fonts from Google Fonts (Google LLC). When a page is loaded,
+            requests are sent to Google's servers, which may transmit your IP address to Google.
+            This is based on a legitimate interest in consistent visual presentation.
+          </p>
+        </div>
+        <div>
+          <h2 class="text-lg font-semibold text-gray-900 mb-2">Your Rights</h2>
+          <p>
+            You have the right to access, rectify, erase, and restrict processing of your personal
+            data, as well as the right to data portability. For any requests, please contact the
+            data controller via email at the address above.
+          </p>
+        </div>
+      </div>
+    </>
+  )}
+</section>

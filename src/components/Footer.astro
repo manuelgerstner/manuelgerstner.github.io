@@ -17,12 +17,27 @@ const year = new Date().getFullYear();
       <p class="text-sm text-gray-500">
         &copy; {year} Manuel Gerstner &mdash; {t('footer.rights')}
       </p>
-      <a
-        href="mailto:manuel@nko-technologies.com"
-        class="text-sm text-gray-500 hover:text-indigo-600 transition-colors"
-      >
-        manuel@nko-technologies.com
-      </a>
+      <div class="flex items-center gap-4">
+        <a
+          href="mailto:manuel@nko-technologies.com"
+          class="text-sm text-gray-500 hover:text-indigo-600 transition-colors"
+        >
+          manuel@nko-technologies.com
+        </a>
+        <span class="text-gray-300">|</span>
+        <a
+          href={lang === 'de' ? '/de/imprint' : '/imprint'}
+          class="text-sm text-gray-400 hover:text-indigo-600 transition-colors"
+        >
+          {t('footer.imprint')}
+        </a>
+        <a
+          href={lang === 'de' ? '/de/privacy' : '/privacy'}
+          class="text-sm text-gray-400 hover:text-indigo-600 transition-colors"
+        >
+          {t('footer.privacy')}
+        </a>
+      </div>
     </div>
   </div>
 </footer>

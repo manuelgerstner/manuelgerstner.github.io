@@ -34,6 +34,8 @@ export const ui = {
     'blog.back': '← Back to Blog',
     'blog.published': 'Published on',
     'footer.rights': 'All rights reserved.',
+    'footer.imprint': 'Imprint',
+    'footer.privacy': 'Privacy',
   },
   de: {
     'nav.home': 'Start',
@@ -60,6 +62,8 @@ export const ui = {
     'blog.back': '← Zurück zum Blog',
     'blog.published': 'Veröffentlicht am',
     'footer.rights': 'Alle Rechte vorbehalten.',
+    'footer.imprint': 'Impressum',
+    'footer.privacy': 'Datenschutz',
   },
   pt: {
     'nav.home': 'Início',
@@ -86,6 +90,8 @@ export const ui = {
     'blog.back': '← Voltar ao Blog',
     'blog.published': 'Publicado em',
     'footer.rights': 'Todos os direitos reservados.',
+    'footer.imprint': 'Imprint',
+    'footer.privacy': 'Privacy',
   },
   fr: {
     'nav.home': 'Accueil',
@@ -112,6 +118,8 @@ export const ui = {
     'blog.back': '← Retour au Blog',
     'blog.published': 'Publié le',
     'footer.rights': 'Tous droits réservés.',
+    'footer.imprint': 'Imprint',
+    'footer.privacy': 'Privacy',
   },
 } as const;
 
